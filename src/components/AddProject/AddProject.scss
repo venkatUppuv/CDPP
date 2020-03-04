@@ -1,0 +1,10 @@
+.Projects{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto;
+    padding: 1.5rem;
+  }
+  
+  .Projects .btn{
+    text-align: end;
+  }

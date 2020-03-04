@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
-import logo from './innominds1.jpg'
-import Loginimage from './inno.jpg'
+import logo from '../../assets/images/logo.jpg';
 import { Button } from 'reactstrap';
 
 export default class Login extends Component {
@@ -40,7 +39,7 @@ export default class Login extends Component {
                 </div>
 
                 <div className='LoginImage'>
-                    {/* <img src={Loginimage} alt='Loginimage' /> */}
+                    {/* <img src={Loginbanner} alt='Loginimage' /> */}
                 </div>
                
             </div>

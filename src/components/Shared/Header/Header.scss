@@ -1,0 +1,19 @@
+   
+  .Logo{
+        grid-area: logo;
+        img{
+            width: 7rem;
+            padding-left: 10px;
+        }
+    } 
+  .Cdpp{
+    grid-area: cdpp;
+    padding: 13px;
+    border-left: 1px solid #ccc;
+  }
+  div.UserImg{
+    grid-area: userimage;
+    text-align: end;
+    padding: 10px;
+    cursor: pointer;
+  }

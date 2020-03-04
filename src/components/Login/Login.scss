@@ -1,0 +1,26 @@
+  
+  .Login{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns:  27rem auto;
+  }
+
+  .Credentials{
+    padding: 7rem 1rem;
+  }
+  
+  .logo p{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--fontColor);
+  }
+  
+  .LoginImage{
+    background: url(././assets/images/loginBanner.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 3rem;
+    height: 576px;
+  }
+

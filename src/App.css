@@ -1,3 +1,18 @@
+body {
+  margin: 10px 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
 .App {
   text-align: center;
 }
@@ -46,31 +61,6 @@
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
-.Credentials{
-  padding: 7rem 1rem;
-}
-
-.Login{
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns:  27rem auto;
-}
-
-.logo p{
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--fontColor);
-}
-
-.LoginImage{
-  /* min-height: 400px; */
-  background: url(./inno.jpg);
-  background-position: center;
-  background-size: cover;
-  padding: 3rem;
-  height: 576px;
-}
 /* 
 .Home{
   display: grid;
@@ -90,123 +80,6 @@
   position: relative;
   margin-left: 10.4rem;
 } */
-  /* #################  Home  ########################## */
-
-.wrapper{
-  height: 100vh;
-  width: 100wh;
-  padding: 0;
-  margin: 0;
-  /* color: #e6e6e6; */
-}
-
-.wrapper{
-  display: grid;
-  grid-template-columns: 1fr 3fr 20fr;
-  grid-template-rows: 50px auto 10px;
-  grid-template-areas: "header header header" 
-                      "Sidenav ProjectHeading ProjectHeading"
-                      "footer footer footer";
-}
-
-.wrapper:hover .Sidenav {
-/* width: 60px;   */
-}
-
-
-.ProjectHeading{
-  grid-area: ProjectHeading;
-  /* background-color: rgb(150, 145, 145);  */
-}
-
-.Sidenav .SideNav a{
-  text-decoration: none;
-  color: var(--fontColor);
-}
-.header{
-  grid-area: header;
-  display: grid;
-  grid-template-columns: 1fr 2fr 9fr;
-  grid-template-areas: "logo cdpp userimage";
-  border-bottom: 2px solid #efeeee;
-
-}
-
-.header .Logo img{
-  width: 7rem;
-  padding-left: 10px;
-}
-
-.Logo{
-  grid-area: logo;
-}
-.Cdpp{
-  grid-area: cdpp;
-  padding: 13px;
-  border-left: 1px solid #ccc;
-}
-div.UserImg{
-  grid-area: userimage;
-  text-align: end;
-  padding: 10px;
-  cursor: pointer;
-}
-.fa {
-  font-size: 1.5rem;
-}
-.fa-angle-down{
-  font-size:1.5rem;
-}
-.fa-caret-down{
-  color: #D0D0D0;
-}
-.Sidenav{
-  grid-area: Sidenav;
-  background-color: #3D4045;
-  overflow: auto;
-  width: 200px;
-  transition: all 1s;
-}
-
-.Toggle{
-  grid-area: Sidenav;
-  background-color: #2b2929;
-  overflow: auto;
-  width: 50px;
-  transition: all 1s;
-}
-.footer{
-  grid-area: footer;
-  /* background-color: brown;  */
-
-}
-
-
-
-.SideNav{
-  color: var(--fontColor);
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-gap: 20px;
-  padding: 20px;
-}
-.SideNav .Hamburg{
-  text-align: end;
-}
-.Hamburg{
-  cursor: pointer;
-}
-
-.Projects{
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: auto auto;
-  padding: 1.5rem;
-}
-
-.Projects .btn{
-  text-align: end;
-}
 .GridComp{
   padding: 20px;
 }
