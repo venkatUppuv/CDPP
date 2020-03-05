@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
 import logo from '../../assets/images/logo.jpg';
 import { Button } from 'reactstrap';
+import './Login.scss';
 
 export default class Login extends Component {
     render() {
