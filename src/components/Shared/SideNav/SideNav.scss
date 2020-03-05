@@ -1,10 +1,9 @@
-
-.Sidenav{
+.Sidenav, .Toggle{
     grid-area: Sidenav;
     background-color: #3D4045;
     overflow: auto;
     width: 200px;
-    transition: all 1s; 
+    transition: all 0.3s; 
     .SideNav{
         color: var(--fontColor);
         display: grid;
@@ -15,18 +14,20 @@
             text-decoration: none;
             color: var(--fontColor);
         }
-        div.linkItem {
-            i.fa{
-                margin-right:10px;
-                width:24px;
-                height:24px;
-                display:inline-block;
-            }
-        }
         .Hamburg{
             text-align: end;
             cursor: pointer;    
         }
     }
 }
+div.Toggle{
+    .SideNav{
+        padding:20px 10px;
+        div.Hamburg{
+            text-align: left;
+        }
+    }
+
+}
+
 

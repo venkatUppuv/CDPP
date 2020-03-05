@@ -18,8 +18,9 @@
     display: grid;
     grid-template-columns: 1fr 2fr 9fr;
     grid-template-areas: "logo cdpp userimage";
-    border-bottom: 2px solid #efeeee;
-
+    border-bottom: 1px solid #efeeee;
+    height:75px;
+    padding:10px;
   }
   .ProjectHeading{
     grid-area: ProjectHeading;
