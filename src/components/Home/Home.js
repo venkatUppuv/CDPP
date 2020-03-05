@@ -22,7 +22,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="wrapper">
-                <div className="header row py-0 m-0">
+                <div className="header p-0">
                   <Header/>
                 </div>
                 

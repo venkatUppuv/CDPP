@@ -81,6 +81,7 @@ code {
   margin-left: 10.4rem;
 } */
 .GridComp{
+  grid-area:gridComp;
   padding: 20px;
 }
 .table thead th {

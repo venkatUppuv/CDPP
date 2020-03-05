@@ -10,17 +10,16 @@
                         "Sidenav ProjectHeading ProjectHeading"
                         "footer footer footer";
   }
-
-
-
   .header{
     grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 2fr 9fr;
-    grid-template-areas: "logo cdpp userimage";
+    display: grid;   
     border-bottom: 1px solid #efeeee;
     height:75px;
     padding:10px;
+    .navbar{
+      grid-template-columns: 1fr 2fr 8fr;
+      grid-template-areas: "logo cdpp userimage";
+    }
   }
   .ProjectHeading{
     grid-area: ProjectHeading;

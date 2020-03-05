@@ -16,7 +16,7 @@ import './Header.scss'
 export default function Header() {
     return (
         < >
-        <Navbar color="transparent" light expand="md" className="col p-0">
+        <Navbar color="transparent" light expand="md" className="p-0">
                 <NavbarBrand href="/">
                     <div className='Logo'>
                         <img src = {logo} alt = 'logo' />
