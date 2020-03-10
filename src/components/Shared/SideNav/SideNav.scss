@@ -1,9 +1,9 @@
-.Sidenav, .Toggle{
-    grid-area: Sidenav;
+.SideMenu, .Toggle{
+    grid-area: SideMenu;
     background-color: #3D4045;
     overflow: auto;
-    width: 200px;
     transition: all 0.3s; 
+    height:100%;
     .SideNav{
         color: var(--fontColor);
         display: grid;

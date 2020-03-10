@@ -1,9 +1,10 @@
 import React, { Component, useState } from 'react'
-import { Link } from 'react-router-dom'
 import hamburger from '../../../assets/images/hamburger.svg'
 import vendor from '../../../assets/images/vendor.svg'
 import project from '../../../assets/images/project.svg'
 import user from '../../../assets/images/user.svg'
+import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import ProjectSidenav from '../../../components/ProjectSidenav';
 import {
     Collapse,
     Container,
@@ -16,6 +17,7 @@ import {
     NavbarText
   } from 'reactstrap';
 import './SideNav.scss';
+import PageLayout from '../../Layout/PageLayout'
 
 export default class SideNav extends Component {
     constructor(){
@@ -23,7 +25,9 @@ export default class SideNav extends Component {
         super();
 
         this.state = {
-            isOpen: false
+            isOpen: true,
+            toggle:true,
+            subtitle:"Projects"
         }
     }
 
@@ -33,23 +37,31 @@ export default class SideNav extends Component {
         });
 
     }
+
+    
+    onToggle = ()=>{
+        console.log('called..')
+        this.setState({toggle:!this.state.toggle
+        })
+    }
   
     render() {
-
+        const { match } = this.props
         return (
-            <div className='SideNav'>
-                <div className='Hamburg ' onClick={this.props.onToggle}>
+           <div  className={this.state.toggle ? "SideMenu":"Toggle"}>
+            <div className='SideNav'  onToggle = {this.onToggle} toggle={this.state.toggle}>
+                <div className='Hamburg ' onClick={this.props.toggleProps}>
                     <img src={hamburger}/>
                 </div>
                 <div className="linkItem">
                     <Link to='/home/projects'>
                         <img src={project} alt="Projects" className="mr-2"/>
-                        <span>{this.props.toggle && 'Projects'}</span>
+                        <span>{'Projects'}</span>
                     </Link>
-                    <NavbarToggler onClick={this.toggle}  className="mr-2 pull-right">
+                    <NavbarToggler onClick={this.toggle}  className="mr-2 pull-right p-0">
                     { this.state.isOpen?   
-                        <i className="fa fa-caret-up"></i>:
-                        <i className="fa fa-caret-down"></i>
+                        <i className="fa fa-caret-down"></i>:
+                        <i className="fa fa-caret-up"></i>
                     }
                     </NavbarToggler>
                     <Collapse isOpen={!this.state.isOpen}>
@@ -65,13 +77,14 @@ export default class SideNav extends Component {
                 </div>
                 <div className="linkItem">
                         <img src={vendor} alt="Vendor" className="mr-2"/>
-                        <span>{this.props.toggle && 'Vendors'}</span>
+                        <span>{'Vendors'}</span>
                 </div>
                 <div className="linkItem">
                         <img src={user} alt="Users" className="mr-2"/>
-                        <span>{this.props.toggle && 'User Managment'}</span>
+                        <span>{'User Managment'}</span>
                 </div>
             </div>
-        )
+            </div>
+            )
     }
 }
