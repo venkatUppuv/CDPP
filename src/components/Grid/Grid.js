@@ -9,7 +9,7 @@ export default class GridComp extends Component {
         this.state = {
             data: [
                 {
-                    "Id": 1,
+                
                     "Customer": 'ALSKSklD',
                     "Project": 'CDPP_Inno',
                     "ProjectManager": "Inno",
@@ -22,7 +22,6 @@ export default class GridComp extends Component {
                     
                 },
                 {
-                    "Id": 2,
                     "Customer": 'ALSKSklD',
                     "Project": 'CDPP_Inno',
                     "ProjectManager": "Inno",
@@ -35,7 +34,6 @@ export default class GridComp extends Component {
                     
                 },
                 {
-                    "Id": 3,
                     "Customer": 'ALSKSklD',
                     "Project": 'CDPP_Inno',
                     "ProjectManager": "Inno",
@@ -48,7 +46,6 @@ export default class GridComp extends Component {
                     
                 },
                 {
-                    "Id": 4,
                     "Customer": 'ALSKSklD',
                     "Project": 'CDPP_Inno',
                     "ProjectManager": "Inno",
@@ -61,7 +58,6 @@ export default class GridComp extends Component {
                     
                 },
                 {
-                    "Id": 5,
                     "Customer": 'ALSKSklD',
                     "Project": 'CDPP_Inno',
                     "ProjectManager": "Inno",

@@ -34,15 +34,7 @@
   .fa-caret-down{
     color: #D0D0D0;
   }
-  
-  .Toggle{
-    grid-area: SideMenu;
-    background-color: #2b2929;
-    overflow: auto;
-    width: 50px;
-    transition: all 1s;
-  }
-  .footer{
+   .footer{
     grid-area: footer;
     /* background-color: brown;  */
   

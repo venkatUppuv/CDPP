@@ -28,6 +28,7 @@ export default class SideNav extends Component {
             isOpen: true,
             toggle:true,
             subtitle:"Projects"
+            
         }
     }
 
@@ -37,21 +38,23 @@ export default class SideNav extends Component {
         });
 
     }
-
-    
+   
     onToggle = ()=>{
         console.log('called..')
-        this.setState({toggle:!this.state.toggle
+        this.setState({
+            toggle : !this.state.toggle
         })
     }
+
+
   
     render() {
         const { match } = this.props
         return (
            <div  className={this.state.toggle ? "SideMenu":"Toggle"}>
-            <div className='SideNav'  onToggle = {this.onToggle} toggle={this.state.toggle}>
-                <div className='Hamburg ' onClick={this.props.toggleProps}>
-                    <img src={hamburger}/>
+            <div className='SideNav'   toggle={this.state.toggle}>
+                <div className='Hamburg ' onClick={this.onToggle}>
+                    <img src={hamburger}/>{this.state.toggle}
                 </div>
                 <div className="linkItem">
                     <Link to='/home/projects'>

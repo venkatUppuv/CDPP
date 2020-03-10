@@ -1,18 +1,20 @@
-.SideMenu, .Toggle{
+.SideMenu{
     grid-area: SideMenu;
     background-color: #3D4045;
     overflow: auto;
     transition: all 0.3s; 
     height:100%;
+    width:100%;
     .SideNav{
         color: var(--fontColor);
         display: grid;
         grid-template-rows: auto auto auto;
-        grid-gap: 20px;
-        padding: 20px;
+        div{
+            padding: 10px;
+        }
         a{
             text-decoration: none;
-            color: var(--fontColor);
+            color: white;
         }
         .Hamburg{
             text-align: end;
@@ -21,10 +23,28 @@
     }
 }
 div.Toggle{
+    grid-area: SideMenu;
+    background-color: #2b2929;
+    overflow: auto;
+    height:100%;
+    width: 50px;
+    transition: all 1s;
+    .SideMenu{
+        width: 20%;
+    }
     .SideNav{
         padding:20px 10px;
         div.Hamburg{
             text-align: left;
+            padding-bottom:20px;
+        }
+        a{
+            span{
+                visibility: hidden;
+            }
+        }
+        .navbar-toggler{
+            display: none;
         }
     }
 
