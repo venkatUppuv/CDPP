@@ -1,20 +1,90 @@
-import React, { Component } from 'react'
-import { Button, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React, { Component, useState } from 'react'
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col,Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import './AddProject.scss';
+import classnames from 'classnames';
 
 
-export default class AddProject extends Component {
+export default class AddPoject extends Component {
     render() {
-        return (
+          return (
             <div className='Projects'>
-                <div><h2>{this.props.title}</h2></div>
-                <div className='btn'><Button color="primary border-0" style={{background:'#E84924'}}><a href="/addproject" color=
-                'light'>+ Add Project</a></Button></div>
+                <Row>
+                <Col className="p-0">
+                  <h2>Add Project</h2>
+                </Col>
+                </Row>
+                <Row>
                 <Breadcrumb>
                     <BreadcrumbItem><a href="#">Dashboard</a></BreadcrumbItem>
-                    <BreadcrumbItem active>Projects</BreadcrumbItem>
+                    <BreadcrumbItem><a href="#">Projects</a></BreadcrumbItem>
+                    <BreadcrumbItem active>Add New Project</BreadcrumbItem>
                 </Breadcrumb>
+                </Row>
+        
+
+                <Nav tabs>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: true })}
+                  
+                  >
+                    Project Details
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={classnames({ active: false})}
+                   
+                  >
+                    Team Members
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                <NavLink
+                  className={classnames({ active: false})}
+                 
+                >
+                  Project Expence
+                </NavLink>
+              </NavItem>
+              <NavItem>
+              <NavLink
+                className={classnames({ active: false})}
+               
+              >
+                Vedor Details
+              </NavLink>
+            </NavItem>
+              </Nav>
+              <TabContent>
+              <TabPane tabId="1">
+                <Row>
+                  <Col sm="12">
+                    <h4>Tab 1 Contents</h4>
+                  </Col>
+                </Row>
+              </TabPane>
+              <TabPane tabId="2">
+                <Row>
+                  <Col sm="6">
+                    <Card body>
+                      <CardTitle>Special Title Treatment</CardTitle>
+                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <Button>Go somewhere</Button>
+                    </Card>
+                  </Col>
+                  <Col sm="6">
+                    <Card body>
+                      <CardTitle>Special Title Treatment</CardTitle>
+                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <Button>Go somewhere</Button>
+                    </Card>
+                  </Col>
+                </Row>
+              </TabPane>
+            </TabContent>
             </div>
+            
         )
     }
 

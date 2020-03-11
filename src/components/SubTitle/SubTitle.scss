@@ -1,0 +1,19 @@
+.Projects{
+    display: grid;
+    padding: 1.5rem;
+    .btn{
+      text-align: end;
+        a{
+          color: white;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+    }
+      .breadcrumb{
+        background-color: transparent !important;
+        padding-left:0;
+      }
+  }
+  
+

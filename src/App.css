@@ -1,3 +1,6 @@
+html,body{
+  height: 100%;
+}
 body {
   margin: 10px 50px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -60,7 +63,9 @@ code {
     --light: #fff;
     --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
-
+#root{
+  height:100%;
+}
 /* 
 .Home{
   display: grid;

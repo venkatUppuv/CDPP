@@ -3,8 +3,6 @@
     background-color: #3D4045;
     overflow: auto;
     transition: all 0.3s; 
-    height:100%;
-    width:100%;
     .SideNav{
         color: var(--fontColor);
         display: grid;
@@ -26,7 +24,6 @@ div.Toggle{
     grid-area: SideMenu;
     background-color: #2b2929;
     overflow: auto;
-    height:100%;
     width: 50px;
     transition: all 1s;
     .SideMenu{

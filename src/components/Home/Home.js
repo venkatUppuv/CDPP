@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AddProject from '../AddProject/AddProject'
+import SubTitle from '../SubTitle/SubTitle'
 import GridComp from '../../components/Grid/Grid'
 import './Home.scss'
 
@@ -9,7 +9,11 @@ export default class Home extends Component {
         super();
         this.state={
             toggle:true,
-            subtitle:"Projects"
+            subtitle:"Projects",
+            breadcrumb: [
+                "Dashboard",
+                "Projects"
+            ]
 
         }
     }
@@ -24,7 +28,7 @@ export default class Home extends Component {
         return (
             <div>
                 <div className="ProjectHeading">
-                   <AddProject title={this.state.subtitle}/>
+                   <SubTitle title={this.state.subtitle} breadcrumb={this.state.breadcrumb}/>
                    <GridComp />
                 </div>
             </div>

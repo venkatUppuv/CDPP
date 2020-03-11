@@ -17,7 +17,6 @@ import {
     NavbarText
   } from 'reactstrap';
 import './SideNav.scss';
-import PageLayout from '../../Layout/PageLayout'
 
 export default class SideNav extends Component {
     constructor(){
