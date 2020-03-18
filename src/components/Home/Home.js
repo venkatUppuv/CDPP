@@ -13,8 +13,71 @@ export default class Home extends Component {
             breadcrumb: [
                 "Dashboard",
                 "Projects"
-            ]
+            ],
+            data: [
+                {
+                
+                    "Customer": 'ALSKSklD',
+                    "Project": 'CDPP_Inno',
+                    "ProjectManager": "Inno",
+                    "VendorName": 'Innominds',
+                    "VendorKey": "Az",
+                    "StartDate": 'DD/MM/YYYY',
+                    "EndDate": 'DD/MM/YYYY',
+                    "Email": 'acbdxyz@inno.com',
+                    "Status": 'not available',
+                    
+                },
+                {
+                    "Customer": 'ALSKSklD',
+                    "Project": 'CDPP_Inno',
+                    "ProjectManager": "Inno",
+                    "VendorName": 'Innominds',
+                    "VendorKey": "Az",
+                    "StartDate": 'DD/MM/YYYY',
+                    "EndDate": 'DD/MM/YYYY',
+                    "Email": 'acbdxyz@inno.com',
+                    "Status": 'not available',
+                    
+                },
+                {
+                    "Customer": 'ALSKSklD',
+                    "Project": 'CDPP_Inno',
+                    "ProjectManager": "Inno",
+                    "VendorName": 'Innominds',
+                    "VendorKey": "Az",
+                    "StartDate": 'DD/MM/YYYY',
+                    "EndDate": 'DD/MM/YYYY',
+                    "Email": 'acbdxyz@inno.com',
+                    "Status": 'not available',
+                    
+                },
+                {
+                    "Customer": 'ALSKSklD',
+                    "Project": 'CDPP_Inno',
+                    "ProjectManager": "Inno",
+                    "VendorName": 'Innominds',
+                    "VendorKey": "Az",
+                    "StartDate": 'DD/MM/YYYY',
+                    "EndDate": 'DD/MM/YYYY',
+                    "Email": 'acbdxyz@inno.com',
+                    "Status": 'not available',
+                    
+                },
+                {
+                    "Customer": 'ALSKSklD',
+                    "Project": 'CDPP_Inno',
+                    "ProjectManager": "Inno",
+                    "VendorName": 'Innominds',
+                    "VendorKey": "Az",
+                    "StartDate": 'DD/MM/YYYY',
+                    "EndDate": 'DD/MM/YYYY',
+                    "Email": 'acbdxyz@inno.com',
+                    "Status": 'not available',
+                    
+                },
 
+            ]
         }
     }
     
@@ -28,8 +91,8 @@ export default class Home extends Component {
         return (
             <div>
                 <div className="ProjectHeading">
-                   <SubTitle title={this.state.subtitle} breadcrumb={this.state.breadcrumb}/>
-                   <GridComp />
+                   <SubTitle {...this.state} />
+                   <GridComp {...this.state.data} />
                 </div>
             </div>
         )

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Table, Button } from 'reactstrap';
 import "./vendor-list.style.scss";
+import GridComp from '../Grid/Grid';
+
 
 
 class VendorList extends Component {
@@ -61,28 +63,11 @@ class VendorList extends Component {
     }
 
     render() {
-        let keys = Object.keys(this.state.List[0])
         return(
             <div className='vendors'>
                 <h2 className='title'>Vendors List</h2>
-                <div>
-                    <Table responsive size="lr">
-                        <thead>
-                            <tr>
-                                {keys.map((e,idx) => <th key={idx}>{e}</th>)}
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.List.map((user,id) =>
-                                <tr key={id}>
-                                {keys.map((e, id) =>
-                                    <td key={id}>{user[e]}</td>
-                                )}
-                                </tr>
-                                )}
-                        </tbody>
-                    </Table>
-                </div>
+                
+                 <GridComp {...this.state.List}/>
             </div>
             )
     }
