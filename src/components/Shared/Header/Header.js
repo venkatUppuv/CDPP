@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component , useState} from 'react'
 import logo from '../../../assets/images/headerLogo.svg'
 import {
     Collapse,
@@ -9,13 +9,19 @@ import {
     Nav,
     NavItem,
     NavLink,
-    NavbarText
+    NavbarText,
+    Dropdown, DropdownToggle, DropdownMenu, DropdownItem
   } from 'reactstrap';
 import './Header.scss'
 
 export default function Header() {
-    return (
-        < >
+
+        const [dropdownOpen, setDropdownOpen] = useState(false);
+        const toggle = () => setDropdownOpen(prevState => !prevState);
+       const logout = () => {
+            alert("logout");
+        }
+        return (
         <Navbar color="transparent" light expand="md" className="p-0">
                 <NavbarBrand href="/">
                     <div className='Logo'>
@@ -31,17 +37,17 @@ export default function Header() {
                 </NavLink>
                 </NavItem>
             </Nav>
-            <NavbarText>
-                <div className='UserImg'>
-                    <i className="fa fa-user-circle-o fa-8x mr-1" aria-hidden="true"></i>
-                    <i className="fa fa-caret-down" aria-hidden="true"></i>
-                </div>
+            <NavbarText>             
+                <Dropdown  className='UserImg' isOpen={dropdownOpen} toggle={toggle}>
+                    <DropdownToggle caret color="light">
+                        <i className="fa fa-user-circle-o fa-8x mr-1" aria-hidden="true"></i>
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                        <DropdownItem onClick={logout}>Log Out</DropdownItem>
+                    </DropdownMenu>
+              </Dropdown>
             </NavbarText>
             </Collapse>
         </Navbar>         
-           
-           
-    
-        </>
-    )
+        )
 }

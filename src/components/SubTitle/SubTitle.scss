@@ -1,6 +1,4 @@
 .Projects{
-    display: grid;
-    padding: 1.5rem;
     .btn{
       text-align: end;
         a{
@@ -12,8 +10,12 @@
     }
       .breadcrumb{
         background-color: transparent !important;
-        padding-left:0;
       }
+    
   }
-  
+  nav.bdcrumb{
+    ol{
+      background-color: transparent;
+    }
+  }
 

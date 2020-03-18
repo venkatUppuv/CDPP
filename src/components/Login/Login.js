@@ -17,56 +17,79 @@ class Login extends Component {
         super();
         this.state = {
             username: '',
-            password:''
+            password:'',
+            usernameError:'',
+            passwordError:'',
+            formError:''
         }
     }
     handleChange = (e) => {
+       // this.validate();
         this.setState({
             [e.target.name]: e.target.value
         })
     }
+    validate  = () => {
+        let usernameError="", passwordError ="";
+        if(!this.state.username){
+           usernameError = "Username cannot be empty"
+        }
+        if(!this.state.password ){
+            passwordError= "Password cannot be empty"
+        }
+        if(usernameError || passwordError){
+            this.setState({ usernameError, passwordError });
+            return false;
+        }
+        return true;
+    }
     onSubmit = (e) => {
         e.preventDefault();
-        if(this.state.username !== null && this.state.password !== null){
+        const formValid = this.validate();
+        if(formValid){
             let url = 'http://localhost:8082/login?username='+this.state.username+'&password='+this.state.password;
             axios.post(url).then((result) => {
                 this.props.history.push('/home');
                 axios.defaults.headers.common['Authorization'] = `Bearer ${result.accessToken}` 
+            }).catch((err) => {
+                this.setState({ formError: err});
             });
-        }  
+        } 
      }
  
     render() {
         return (
-            <div className='Login'>
+        <div className='Login'>
 
-                <div className='Credentials'>
-
+            <div className='Credentials'>
                     <div className='logo'>
                         <img src={logo} alt='logo' />
                         <p>engineering innovation</p>
                     </div>
 
-                    <Form  className='InputFields'>
+                <Form  className='InputFields'>
+                    <div className="text-danger">{this.state.formError}</div>
                     <FormGroup>
                       <Label for="username">Username</Label>
-                      <Input type="username" name="username" id="username" placeholder="username"   value={this.state.username}
-                      onChange={e => this.handleChange(e)}/>
+                      <Input type="username" name="username" id="username" value={this.state.username}
+                      onChange={e => this.handleChange(e)} className={this.state.usernameError?'is-invalid':'form-control'}/>
+                      <div className="text-danger">{this.state.usernameError}</div>
                     </FormGroup>
                     <FormGroup>
                       <Label for="password">Password</Label>
-                      <Input type="password" name="password" id="password" placeholder="password"   value={this.state.password}
-                      onChange={e => this.handleChange(e)}/>
+                      <Input type="password" name="password" id="password" value={this.state.password}
+                      onChange={e => this.handleChange(e)} className={this.state.passwordError?'is-invalid':'fonr-control'}/>
+                      <div className="text-danger">{this.state.passwordError}</div>
                     </FormGroup>
-                    <Button onClick={this.onSubmit}>Submit</Button>
-                    </Form>
-                </div>
+                    <Button className="btn btn-primary" onClick={this.onSubmit}>Login</Button>
+                </Form>
+            </div>
 
                 <div className='LoginImage'>
                     {/* <img src={Loginbanner} alt='Loginimage' /> */}
                 </div>
                
-            </div>
+        </div>
         )
     }
 }

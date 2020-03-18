@@ -9,9 +9,9 @@ export default class AddPoject extends Component {
           return (
             <div className='Projects'>
                 <Row>
-                <Col className="p-0">
-                  <h2>Add Project</h2>
-                </Col>
+                  <Col>
+                    <h2>Add Project</h2>
+                  </Col>
                 </Row>
                 <Row>
                 <Breadcrumb>

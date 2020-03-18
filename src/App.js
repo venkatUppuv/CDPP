@@ -4,7 +4,8 @@ import './App.css';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
 import Vendor from './components/Vendor';
-import UserManagement from './components/UserManagement';
+import ListUsers from './components/UserManagement/ListUsers/ListUsers';
+import AddUser from './components/UserManagement/AddUser/AddUser';
 import Header from './components/Shared/Header/Header';
 import SideNav from './components/Shared/SideNav/SideNav'
 import { Container, Col , Row} from 'reactstrap';
@@ -54,9 +55,10 @@ function App() {
               <Layout exact path='/' layout={LoginLayout} component={Login}/>
               <Layout exact path='/home' layout={DefaultLayout}  component={Home}/>
 
-              <Layout exact path='/project' layout={DefaultLayout}  component={AddProject}/>
+              <Layout exact path='/addproject' layout={DefaultLayout}  component={AddProject}/>
               <Layout exact path='/vendor' layout={DefaultLayout}  component={Vendor}/>
-              <Layout exact path='/user' layout={DefaultLayout}  component={UserManagement}/>
+              <Layout exact path='/user' layout={DefaultLayout}  component={ListUsers}/>
+              <Layout exact path='/adduser' layout={DefaultLayout}  component={AddUser}/>
           </Switch>
       </Container>
     </>

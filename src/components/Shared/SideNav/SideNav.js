@@ -56,7 +56,7 @@ export default class SideNav extends Component {
                     <img src={hamburger}/>{this.state.toggle}
                 </div>
                 <div className="linkItem">
-                    <Link to='/home/projects'>
+                    <Link to='/home'>
                         <img src={project} alt="Projects" className="mr-2"/>
                         <span>{'Projects'}</span>
                     </Link>
@@ -82,8 +82,10 @@ export default class SideNav extends Component {
                         <span>{'Vendors'}</span>
                 </div>
                 <div className="linkItem">
+                    <Link to='/user'>
                         <img src={user} alt="Users" className="mr-2"/>
                         <span>{'User Managment'}</span>
+                    </Link>                        
                 </div>
             </div>
             </div>
