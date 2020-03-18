@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Table } from 'reactstrap';
-import GridDisp from '../GridDisp';
 import './Grid.scss';
 
 export default class GridComp extends Component {

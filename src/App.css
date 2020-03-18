@@ -1,5 +1,6 @@
 html,body{
   height: 100%;
+  max-width: 1320px;
 }
 body {
   margin: 10px 50px;
@@ -15,6 +16,10 @@ code {
     monospace;
 }
 
+.container{
+  max-width: 85% !important;
+  margin: 0px !important;
+}
 
 .App {
   text-align: center;
@@ -66,6 +71,7 @@ code {
 #root{
   height:100%;
 }
+
 /* 
 .Home{
   display: grid;

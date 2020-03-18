@@ -15,5 +15,15 @@
         padding-left:0;
       }
   }
+
+  @media screen and (max-width: 420px){
+    .Projects{
+      padding: 0px;
+      .btn{
+        text-align: left;
+        padding-left: 0px;
+      }
+    }
+  }
   
 

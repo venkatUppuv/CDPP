@@ -3,10 +3,12 @@
     background-color: #3D4045;
     overflow: auto;
     transition: all 0.3s; 
+    width: 14%;
     .SideNav{
         color: var(--fontColor);
         display: grid;
         grid-template-rows: auto auto auto;
+        z-index: 1;
         div{
             padding: 10px;
         }

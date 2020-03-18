@@ -3,10 +3,9 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import './App.css';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
-import Vendor from './components/Vendor';
-import UserManagement from './components/UserManagement';
 import Header from './components/Shared/Header/Header';
-import SideNav from './components/Shared/SideNav/SideNav'
+import SideNav from './components/Shared/SideNav/SideNav';
+import VendorList from './components/vendor/vendor-list.component';
 import { Container, Col , Row} from 'reactstrap';
 import AddProject from './components/AddProject/AddProject';
 
@@ -39,9 +38,9 @@ const DefaultLayout = (props) => (
       </Row>
       <Row className="h-100">
         <SideNav/>
-        <Col>
+        <div className="container">
           {props.children}
-        </Col>        
+        </div>        
       </Row>
   </div>
 );
@@ -53,10 +52,8 @@ function App() {
           <Switch>
               <Layout exact path='/' layout={LoginLayout} component={Login}/>
               <Layout exact path='/home' layout={DefaultLayout}  component={Home}/>
-
+              <Layout exact path='/vendor' layout={DefaultLayout} component={VendorList}/>
               <Layout exact path='/project' layout={DefaultLayout}  component={AddProject}/>
-              <Layout exact path='/vendor' layout={DefaultLayout}  component={Vendor}/>
-              <Layout exact path='/user' layout={DefaultLayout}  component={UserManagement}/>
           </Switch>
       </Container>
     </>

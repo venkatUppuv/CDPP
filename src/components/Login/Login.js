@@ -3,7 +3,7 @@ import { Link, useHistory, withRouter } from 'react-router-dom'
 import { InputGroup, InputGroupText, InputGroupAddon, Input, Form, FormGroup, Label } from 'reactstrap';
 import logo from '../../assets/images/logo.jpg';
 import { Button } from 'reactstrap';
-import axios from 'axios';
+// import axios from 'axios';
 import './Login.scss';
 
 class Login extends Component {
@@ -27,13 +27,14 @@ class Login extends Component {
     }
     onSubmit = (e) => {
         e.preventDefault();
-        if(this.state.username !== null && this.state.password !== null){
-            let url = 'http://localhost:8082/login?username='+this.state.username+'&password='+this.state.password;
-            axios.post(url).then((result) => {
-                this.props.history.push('/home');
-                axios.defaults.headers.common['Authorization'] = `Bearer ${result.accessToken}` 
-            });
-        }  
+        
+        // if(this.state.username !== null && this.state.password !== null){
+        //     let url = 'http://localhost:8082/login?username='+this.state.username+'&password='+this.state.password;
+        //     axios.post(url).then((result) => {
+               this.props.history.push('/home');
+        //         axios.defaults.headers.common['Authorization'] = `Bearer ${result.accessToken}` 
+        //     });
+        // }  
      }
  
     render() {

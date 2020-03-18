@@ -4,7 +4,6 @@ import vendor from '../../../assets/images/vendor.svg'
 import project from '../../../assets/images/project.svg'
 import user from '../../../assets/images/user.svg'
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
-import ProjectSidenav from '../../../components/ProjectSidenav';
 import {
     Collapse,
     Container,
@@ -26,9 +25,26 @@ export default class SideNav extends Component {
         this.state = {
             isOpen: true,
             toggle:true,
-            subtitle:"Projects"
+            subtitle:"Projects",
+            width: 0,
+            height: 0,
             
         }
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions)
+        console.log(this.state.width)
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('resize', this.updateWindowDimensions)
+    }
+
+    updateWindowDimensions = () => {
+        this.setState({width: window.innerWidth, height: window.innerHeight})
+        console.log(this.state.width)
     }
 
     toggle = () => {
@@ -39,7 +55,6 @@ export default class SideNav extends Component {
     }
    
     onToggle = ()=>{
-        console.log('called..')
         this.setState({
             toggle : !this.state.toggle
         })
@@ -51,10 +66,13 @@ export default class SideNav extends Component {
         const { match } = this.props
         return (
            <div  className={this.state.toggle ? "SideMenu":"Toggle"}>
-            <div className='SideNav'   toggle={this.state.toggle}>
-                <div className='Hamburg ' onClick={this.onToggle}>
+            <div className='SideNav'   toggle={this.state.toggle.toString()}>
+                { (this.state.width > 420) &&
+                    <div className='Hamburg ' onClick={this.onToggle}>
                     <img src={hamburger}/>{this.state.toggle}
                 </div>
+                }
+                
                 <div className="linkItem">
                     <Link to='/home/projects'>
                         <img src={project} alt="Projects" className="mr-2"/>
@@ -78,8 +96,10 @@ export default class SideNav extends Component {
                       </Collapse>
                 </div>
                 <div className="linkItem">
+                    <Link to='/vendor'>
                         <img src={vendor} alt="Vendor" className="mr-2"/>
                         <span>{'Vendors'}</span>
+                    </Link>    
                 </div>
                 <div className="linkItem">
                         <img src={user} alt="Users" className="mr-2"/>
