@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Table, Button } from 'reactstrap';
 import "./vendor-list.style.scss";
 import GridComp from '../Grid/Grid';
+import SubTitle from '../SubTitle/SubTitle';
 
 
 
@@ -12,6 +13,11 @@ class VendorList extends Component {
 
         this.state = {
             toggle:true,
+            title:'Vendor',
+            breadcrumb: [
+                "Dashboard",
+                "Vendors"
+            ],
             List : [
                 {
                     'id':1,
@@ -65,9 +71,8 @@ class VendorList extends Component {
     render() {
         return(
             <div className='vendors'>
-                <h2 className='title'>Vendors List</h2>
-                
-                 <GridComp {...this.state.List}/>
+                <SubTitle {...this.state}/>
+                <GridComp {...this.state.List}/>
             </div>
             )
     }

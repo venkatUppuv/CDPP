@@ -9,7 +9,7 @@ export default class Home extends Component {
         super();
         this.state={
             toggle:true,
-            subtitle:"Projects",
+            title:"Project",
             breadcrumb: [
                 "Dashboard",
                 "Projects"

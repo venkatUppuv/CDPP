@@ -74,7 +74,7 @@ export default class SideNav extends Component {
                 }
                 
                 <div className="linkItem">
-                    <Link to='/home/projects'>
+                    <Link to='/home'>
                         <img src={project} alt="Projects" className="mr-2"/>
                         <span>{'Projects'}</span>
                     </Link>
@@ -102,8 +102,10 @@ export default class SideNav extends Component {
                     </Link>    
                 </div>
                 <div className="linkItem">
+                    <Link to='/user'>
                         <img src={user} alt="Users" className="mr-2"/>
                         <span>{'User Managment'}</span>
+                    </Link>                        
                 </div>
             </div>
             </div>

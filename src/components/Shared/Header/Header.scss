@@ -17,4 +17,13 @@
     text-align: end;
     padding: 10px;
     cursor: pointer;
+    &.dropdown{
+      button{
+        &:hover,&:active{
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+    }
   }
+  
